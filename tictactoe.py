@@ -8,8 +8,10 @@ class Board(object):
         """
         Initializes the Board of size 3x3
         """
-
-        pass
+        self.board = [['-','-','-'],
+                      ['-','-','-'],
+                      ['-','-','-']]
+        
 
     def mark_square(self, column, row, player):
         """
@@ -18,11 +20,14 @@ class Board(object):
         :param column: (int) the 0-indexed column of the Board to mark
         :param row: (int) the 0-indexed row of the Board to mark
         :param player: (str) the X or O representation of which player to mark in square
-
+        
         :return: ????
         """
+        if board[row][column] is '-':
+            board[row][column] = player
+            return True
 
-        pass
+        else return False
 
     def has_winner(self):
         """
@@ -30,8 +35,7 @@ class Board(object):
 
         :return: ????
         """
-
-        pass
+        
 
     def play_game(self):
         """
